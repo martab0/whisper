@@ -5,8 +5,7 @@
 [[Model card]](https://github.com/openai/whisper/blob/main/model-card.md)
 [[Colab example]](https://colab.research.google.com/github/openai/whisper/blob/master/notebooks/LibriSpeech.ipynb)
 
-Whisper is a general-purpose speech recognition model. It is trained on a large dataset of diverse audio. It is also a multitasking model that can perform multilingual speech recognition, speech translation, and language identification.
-
+Whisper is a general-purpose speech recognition model. It can also perform multilingual speech recognition, speech translation, and language identification. It is trained on a large dataset of diverse audio. 
 
 ## Approach
 
@@ -17,11 +16,13 @@ A Transformer sequence-to-sequence model is trained on various speech processing
 
 ## Setup
 
-We used Python 3.9.9 and [PyTorch](https://pytorch.org/) 1.10.1 to train and test our models. The codebase should also be compatible with Python 3.8-3.11 and recent PyTorch versions. The codebase also relies on a few Python packages, most notably [OpenAI's tiktoken](https://github.com/openai/tiktoken) for their fast tokenizer implementation. You can download and install (or update to) the latest release of Whisper with the following command:
+We used Python 3.9.9 and [PyTorch](https://pytorch.org/) 1.10.1 to train and test our models. The codebase should also be compatible with Python 3.8-3.11 and recent PyTorch versions. The codebase also depends on a few Python packages, most notably [OpenAI's tiktoken](https://github.com/openai/tiktoken) for their fast tokenizer implementation. 
+
+You can download and install (or update to) the latest release of Whisper with the following command:
 
     pip install -U openai-whisper
 
-Alternatively, the following command will pull and install the latest commit from this repository, along with its Python dependencies:
+Alternatively, you can pull and install the latest commit from this repository, along with its Python dependencies, with the following command:
 
     pip install git+https://github.com/openai/whisper.git 
 
@@ -48,7 +49,9 @@ choco install ffmpeg
 scoop install ffmpeg
 ```
 
-You may need [`rust`](http://rust-lang.org) installed as well, in case [tiktoken](https://github.com/openai/tiktoken) does not provide a pre-built wheel for your platform. If you see installation errors during the `pip install` command above, follow the [Getting started page](https://www.rust-lang.org/learn/get-started) to install Rust development environment. Additionally, you may need to configure the `PATH` environment variable, e.g. `export PATH="$HOME/.cargo/bin:$PATH"`. If the installation fails with `No module named 'setuptools_rust'`, you need to install `setuptools_rust`, e.g. by running:
+* You may need [`rust`](http://rust-lang.org) installed as well, in case [tiktoken](https://github.com/openai/tiktoken) does not provide a pre-built wheel for your platform. If you see installation errors during the `pip install` command above, follow the [Getting started page](https://www.rust-lang.org/learn/get-started) to install Rust development environment.  
+* Additionally, you may need to configure the `PATH` environment variable, e.g. `export PATH="$HOME/.cargo/bin:$PATH"`.
+* If the installation fails with `No module named 'setuptools_rust'`, you need to install `setuptools_rust`, e.g. by running:
 
 ```bash
 pip install setuptools-rust
@@ -102,7 +105,7 @@ See [tokenizer.py](https://github.com/openai/whisper/blob/main/whisper/tokenizer
 
 ## Python usage
 
-Transcription can also be done within Python: 
+You can do the transcription within Python: 
 
 ```python
 import whisper
