@@ -9,9 +9,10 @@
 ## Contents <!-- omit in toc -->
 
 - [What is Whisper](#what-is-whisper)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Installation troubleshooting](#installation-troubleshooting)
+- [Setup](#setup)
+  - [Prerequsites](#prerequisites)
+  - [Installation](#installation)
+  - [Installation troubleshooting](#installation-troubleshooting)
 - [Available models and languages](#available-models-and-languages)
 - [Performance](#performance)
 - [Command-line usage](#command-line-usage)
@@ -29,29 +30,40 @@ A Transformer sequence-to-sequence model is trained on various speech processing
 
 We used Python 3.9.9 and [PyTorch](https://pytorch.org/) 1.10.1 to train and test our models. The codebase should be compatible with Python 3.8-3.11 and recent PyTorch versions. The codebase also depends on a few Python packages, most notably [OpenAI's tiktoken](https://github.com/openai/tiktoken) for their fast tokenizer implementation.
 
-## Prerequisites
+## Setup
+
+### Prerequisites
 
 * Whisper requires the command-line tool [`ffmpeg`](https://ffmpeg.org/) to be installed on your system. The command-line tool is available from most package managers. To install [`ffmpeg`](https://ffmpeg.org/), use one of the following commands for your operating system:
 
+**on Ubuntu or Debian**
 ```bash
-# on Ubuntu or Debian
 sudo apt update && sudo apt install ffmpeg
+```
 
-# on Arch Linux
+**on Arch Linux**
+```bash
 sudo pacman -S ffmpeg
+```
 
-# on MacOS using Homebrew (https://brew.sh/)
+**on MacOS using Homebrew (https://brew.sh/)**
+```bash
 brew install ffmpeg
+```
 
-# on Windows using Chocolatey (https://chocolatey.org/)
+**on Windows using Chocolatey (https://chocolatey.org/)**
+```bash
 choco install ffmpeg
+```
 
-# on Windows using Scoop (https://scoop.sh/)
+**on Windows using Scoop (https://scoop.sh/)**
+```bash
 scoop install ffmpeg
 ```
+
 * If [tiktoken](https://github.com/openai/tiktoken) does not provide a pre-built wheel for your platform, install [`rust`](http://rust-lang.org). Follow the [Getting started page](https://www.rust-lang.org/learn/get-started) to install the Rust development environment. 
 
-## Installation
+### Installation
 
 * You can download and install (or update to) the latest release of Whisper with the following command:
 
@@ -70,7 +82,8 @@ pip install git+https://github.com/openai/whisper.git
 ```bash
 pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
 ```
-## Installation troubleshooting
+
+### Installation troubleshooting
 
 If you see installation errors during the installation of Whisper, follow these steps:
 * Check if you have [`rust`](http://rust-lang.org) installed on your system. If not, follow the [Getting started page](https://www.rust-lang.org/learn/get-started) to install the Rust development environment.
