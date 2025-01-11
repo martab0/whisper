@@ -8,8 +8,7 @@
 
 ## Contents <!-- omit in toc -->
 
-- [Introduction](#introduction)
-- [Approach](#approach)
+- [What is Whisper](#what-is-whisper)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Installation troubleshooting](#installation-troubleshooting)
@@ -20,12 +19,9 @@
 - [More examples](#more-examples)
 - [License](#license)
 
-
-## Introduction
+## What is Whisper
 
 Whisper is a multilingual speech recognition model for general purposes, including speech translation and language identification. Whisper is trained on a large dataset of diverse audio.
-
-## Approach
 
 ![Approach](https://raw.githubusercontent.com/openai/whisper/main/approach.png)
 
